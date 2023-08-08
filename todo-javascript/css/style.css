@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background: url("image.webp") no-repeat center center fixed; */
+  background: url("./2.png") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  line-height: 300%;
+  padding: 15vh;
+}
+
+.banner {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 4rem;
+  /* color: white; */
+  /* background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44); */
+  background: linear-gradient(to right, #9b5c74, #ff6b08, #eedd44, #3e393e);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* margin-top: 3%; */
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.strike-color {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.container {
+  padding: 5vh;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.add-todo {
+  padding-top: 10%;
+  position: relative;
+  font-size: 0.7rem;
+  margin: 0 auto;
+  padding-bottom: 10%;
+}
+
+input {
+  cursor: pointer;
+  font-size: 18px;
+  /* padding: 10px 10px 10px 5px; */
+  padding: 15px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  border-radius: 50px;
+  margin: 0 auto;
+  opacity: 0.4;
+}
+input:focus {
+  outline: none;
+}
+
+label {
+  /* color: #ff0000; */
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  margin: 0 auto;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #5264ae;
+  margin: 0 auto;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+.bar:before,
+.bar:after {
+  /* content: ""; */
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #ffd868;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  margin: 0 auto;
+}
+.bar:before {
+  left: 50%;
+}
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #5264ae;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #5264ae;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+    background: #5264ae;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.todo-list {
+  min-width: 100%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  display: flex;
+  padding-left: 0.5rem;
+  position: relative;
+  line-height: normal !important;
+}
+
+.todo .text {
+  margin-right: 5.5rem;
+}
+
+.todo i {
+  margin: 7px;
+  position: absolute;
+}
+
+.todo i.complete-icon {
+  right: 2.5rem;
+  cursor: pointer;
+}
+
+.todo i.complete-icon:hover {
+  color: blue;
+}
+
+.todo i.delete-icon {
+  right: 0.5rem;
+  cursor: pointer;
+}
+
+.todo i.delete-icon:hover {
+  color: red;
+}
+
+/* date and time */
+/* date and time */
+/* date and time */
+/* date and time */
+/* date and time */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+/* html {
+  font-size: 62.5%;
+} */
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* body {
+  font-family: "Lato", sans-serif;
+  background: #272727;
+  color: #ffd868;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+.display-date {
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.display-time {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  /* border: 2px solid #ffd868; */
+  /* padding: 10px 20px; */
+}
+
+/* .display-time:hover {
+  background: #ffd868;
+  box-shadow: 0 0 30px#ffd868;
+  color: #272727;
+  cursor: pointer;
+} */
